@@ -39,6 +39,8 @@ config.omniauth :openid_connect, {
 }
 ```
 
+Initialized for login is `/auth/OpenIDConnect`
+
 Configuration details:
   * `name` is arbitrary, I recommend using the name of your provider. The name
   configuration exists because you could be using multiple OpenID Connect

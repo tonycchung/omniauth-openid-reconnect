@@ -61,7 +61,6 @@ module OmniAuth
       end
 
       def request_phase
-        super
         redirect authorize_uri
       end
 

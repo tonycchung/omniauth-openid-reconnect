@@ -106,9 +106,9 @@ module OmniAuth
         session[:nonce] = SecureRandom.hex(16)
       end
 
-      def session
-        @env.nil? ? {} : super
-      end
+      #def session
+      #  @env.nil? ? {} : super
+      #end
     end
   end
 end

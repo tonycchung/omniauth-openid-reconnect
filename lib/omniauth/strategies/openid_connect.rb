@@ -83,8 +83,8 @@ module OmniAuth
         client.redirect_uri = client_options.redirect_uri
         client.authorization_uri(
           response_type: options.response_type,
-          scope: options.scope,
-          nonce: nonce,
+          scope: options.scope#,
+          #nonce: nonce,
         )
       end
 
@@ -102,9 +102,9 @@ module OmniAuth
         options.client_options
       end
 
-      def nonce
-        session[:nonce] = SecureRandom.hex(16)
-      end
+      #def nonce
+      #  session[:nonce] = SecureRandom.hex(16)
+      #end
 
       #def session
       #  @env.nil? ? {} : super

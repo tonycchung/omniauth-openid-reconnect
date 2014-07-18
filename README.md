@@ -1,10 +1,12 @@
 # OmniAuth::OpenIDConnect
-
 OpenID Connect strategy for OmniAuth
-[![Gem Version](https://badge.fury.io/rb/omniauth-openid-connect.png)](http://badge.fury.io/rb/omniauth-openid-connect)
-[![Build Status](https://travis-ci.org/jjbohn/omniauth-openid-connect.png?branch=master)](https://travis-ci.org/jjbohn/omniauth-openid-connect)
-[![Coverage Status](https://coveralls.io/repos/jjbohn/omniauth-openid-connect/badge.png?branch=master)](https://coveralls.io/r/jjbohn/omniauth-openid-connect?branch=master)
-[![Code Climate](https://codeclimate.com/github/jjbohn/omniauth-openid-connect.png)](https://codeclimate.com/github/jjbohn/omniauth-openid-connect)
+[![Gem Version](https://badge.fury.io/rb/omniauth-openid-connect.png)](http://badge.fury.io/rb/omniauth-openid-reconnect)
+[![Build Status](https://travis-ci.org/thinkthroughmath/omniauth-openid-connect.svg?branch=master)](https://travis-ci.org/thinkthroughmath/omniauth-openid-connect)
+[![Coverage Status](https://coveralls.io/repos/thinkthroughmath/omniauth-openid-connect/badge.png)](https://coveralls.io/r/thinkthroughmath/omniauth-openid-connect)
+[![Code Climate](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-connect.png)](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-connect)
+
+## Background
+This is derrived work from `jjbohn/omniauth-openid-connect` which appears to be abandoned at this point. I have continued to merge PR's placed against that repo. But I have added enough of my own changes that it is diverged enough to re-release. @ThinkThroughMath actively utilizes this strategy and we will do our best to maintain it.
 
 ## Installation
 
@@ -25,7 +27,6 @@ Or install it yourself as:
 Example configuration
 ```ruby
 config.omniauth :openid_connect, {
-  name: :my_provider,
   scope: [:openid, :email, :profile, :address],
   response_type: :code,
   client_options: {
@@ -42,9 +43,7 @@ config.omniauth :openid_connect, {
 Initialized for login is `/auth/OpenIDConnect`
 
 Configuration details:
-  * `name` is arbitrary, I recommend using the name of your provider. The name
-  configuration exists because you could be using multiple OpenID Connect
-  providers in a single app.
+  * `name` is an optional requirement as of `omniauth-1.2` but it does have an effect with dealing with devise and is the base for which devise uses to create routes identified with `devise_for`. The default is set to the expected camelization of `openid_connect`. If you need to override it you can pass the `name` parameter to the config hash. **Be aware** that what you set this to will be the provider for your devise routes.
   * Although `response_type` is an available option, currently, only `:code`
   is valid. There are plans to bring in implicit flow and hybrid flow at some
   point, but it hasn't come up yet for me. Those flows aren't best practive for
@@ -55,7 +54,7 @@ For the full low down on OpenID Connect, please check out
 
 ## Contributing
 
-1. Fork it ( http://github.com/jjbohn/omniauth-openid-connect/fork )
+1. Fork it ( http://github.com/thinkthroughmath/omniauth-openid-connect/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

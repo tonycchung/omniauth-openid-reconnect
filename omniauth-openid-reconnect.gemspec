@@ -18,19 +18,19 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'activesupport'
+  spec.add_dependency 'activesupport', '>= 0'
   spec.add_dependency 'omniauth', '~> 1.1'
   spec.add_dependency 'openid_connect', '= 0.7.3'
   spec.add_dependency 'addressable', '~> 2.2.8' # Because there is a breaking change in 2.2.9 with the wail rails param arrays are handled
-  spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "minitest"
-  spec.add_development_dependency "mocha"
-  spec.add_development_dependency "guard"
-  spec.add_development_dependency "guard-minitest"
-  spec.add_development_dependency "guard-bundler"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "simplecov"
-  spec.add_development_dependency "pry"
-  spec.add_development_dependency "coveralls"
-  spec.add_development_dependency "faker"
+  spec.add_development_dependency 'bundler', '~> 1.5'
+  spec.add_development_dependency 'minitest', '~> 5.4'
+  spec.add_development_dependency 'mocha', '~> 1.1'
+  spec.add_development_dependency 'guard', '~> 2.6'
+  spec.add_development_dependency 'guard-minitest', '~> 2.3'
+  spec.add_development_dependency 'guard-bundler', '~> 2.0'
+  spec.add_development_dependency 'rake', '~> 10.3'
+  spec.add_development_dependency 'simplecov', '~> 0.9'
+  spec.add_development_dependency 'pry', '~> 0.10'
+  spec.add_development_dependency 'coveralls', '~> 0.7'
+  spec.add_development_dependency 'faker', '~> 1.4'
 end

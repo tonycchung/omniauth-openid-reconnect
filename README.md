@@ -1,9 +1,9 @@
 # OmniAuth::OpenIDConnect
 OpenID Connect strategy for OmniAuth
-[![Gem Version](https://badge.fury.io/rb/omniauth-openid-connect.png)](http://badge.fury.io/rb/omniauth-openid-reconnect)
-[![Build Status](https://travis-ci.org/thinkthroughmath/omniauth-openid-connect.svg?branch=master)](https://travis-ci.org/thinkthroughmath/omniauth-openid-connect)
-[![Coverage Status](https://coveralls.io/repos/thinkthroughmath/omniauth-openid-connect/badge.png)](https://coveralls.io/r/thinkthroughmath/omniauth-openid-connect)
-[![Code Climate](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-connect.png)](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-connect)
+[![Gem Version](https://badge.fury.io/rb/omniauth-openid-reconnect.png)](http://badge.fury.io/rb/omniauth-openid-reconnect)
+[![Build Status](https://travis-ci.org/thinkthroughmath/omniauth-openid-reconnect.svg?branch=master)](https://travis-ci.org/thinkthroughmath/omniauth-openid-reconnect)
+[![Coverage Status](https://coveralls.io/repos/thinkthroughmath/omniauth-openid-reconnect/badge.png?branch=master)](https://coveralls.io/r/thinkthroughmath/omniauth-openid-reconnect?branch=master)
+[![Code Climate](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-reconnect.png)](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-reconnect)
 
 ## Background
 This is derrived work from `jjbohn/omniauth-openid-connect` which appears to be abandoned at this point. I have continued to merge PR's placed against that repo. But I have added enough of my own changes that it is diverged enough to re-release. @ThinkThroughMath actively utilizes this strategy and we will do our best to maintain it.

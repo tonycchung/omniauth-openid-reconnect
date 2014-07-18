@@ -6,7 +6,15 @@ OpenID Connect strategy for OmniAuth
 [![Code Climate](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-reconnect.png)](https://codeclimate.com/github/thinkthroughmath/omniauth-openid-reconnect)
 
 ## Background
+
 This is derrived work from `jjbohn/omniauth-openid-connect` which appears to be abandoned at this point. I have continued to merge PR's placed against that repo. But I have added enough of my own changes that it is diverged enough to re-release. @ThinkThroughMath actively utilizes this strategy and we will do our best to maintain it.
+
+### Whats different.
+
+- Using Addressable 2.8 - At 2.9 `addressable` decided that the way that Rails 3 handles param[] items was too hard to handle and removed the feature. This breaking change within a semantic version makes using `addressable-3.0` difficult in existing applications. There is no impact on the auth strategy though.
+- Better devise support be returning a default `name` options parameter
+- Partial integration of google `nonce` requirement.
+- Inclusing of aging PRs from the parent gem this replaces.
 
 ## Installation
 

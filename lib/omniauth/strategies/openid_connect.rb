@@ -19,6 +19,7 @@ module OmniAuth
         token_endpoint: "/token",
         userinfo_endpoint: "/userinfo"
       }
+      option :name, 'openid_connect'
       option :scope, [:openid]
       option :response_type, "code"
       option :state

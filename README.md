@@ -48,8 +48,6 @@ config.omniauth :openid_connect, {
 }
 ```
 
-Initialized for login is `/auth/OpenIDConnect`
-
 Configuration details:
   * `name` is an optional requirement as of `omniauth-1.2` but it does have an effect with dealing with devise and is the base for which devise uses to create routes identified with `devise_for`. The default is set to the expected camelization of `openid_connect`. If you need to override it you can pass the `name` parameter to the config hash. **Be aware** that what you set this to will be the provider for your devise routes.
   * Although `response_type` is an available option, currently, only `:code`

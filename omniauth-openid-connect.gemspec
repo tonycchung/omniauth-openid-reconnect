@@ -6,11 +6,11 @@ require 'omniauth/openid_connect/version'
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-openid-connect"
   spec.version       = OmniAuth::OpenIDConnect::VERSION
-  spec.authors       = ["John Bohn"]
-  spec.email         = ["jjbohn@gmail.com"]
-  spec.summary       = %q{OpenID Connect Strategy for OmniAuth}
-  spec.description   = %q{OpenID Connect Strategy for OmniAuth}
-  spec.homepage      = "https://github.com/jjbohn/omniauth-openid-connect"
+  spec.authors       = ["Paul Scarrone","John Bohn"]
+  spec.email         = ["paul.scarrone@gmail.com","jjbohn@gmail.com"]
+  spec.summary       = %q{OpenID Connect Strategy MK2 for OmniAuth}
+  spec.description   = %q{OpenID Connect Strategy MK2 for OmniAuth which is fully compliant with devise and rails and currently maintained. Derived from jjbohn's work but actively maintained}
+  spec.homepage      = "https://github.com/thinkthroughmath/omniauth-openid-connect"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activesupport'
   spec.add_dependency 'omniauth', '~> 1.1'
   spec.add_dependency 'openid_connect', '= 0.7.3'
-  spec.add_dependency 'addressable', '~> 2.2.8'
+  spec.add_dependency 'addressable', '~> 2.2.8' # Because there is a breaking change in 2.2.9 with the wail rails param arrays are handled
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "minitest"
   spec.add_development_dependency "mocha"

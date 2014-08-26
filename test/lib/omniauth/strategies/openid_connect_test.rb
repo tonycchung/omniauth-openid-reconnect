@@ -9,7 +9,7 @@ class OmniAuth::Strategies::OpenIDConnectTest < StrategyTestCase
   end
 
   def test_request_phase
-    expected_redirect = /^https:\/\/example\.com\/authorize\?client_id=1234&nonce=[\w\d]{32}&response_type=code&scope=openid$/
+    expected_redirect = /^https:\/\/example\.com\/authorize\?client_id=1234&response_type=code&scope=openid$/
     strategy.options.client_options.host = "example.com"
     strategy.expects(:redirect).with(regexp_matches(expected_redirect))
     strategy.request_phase

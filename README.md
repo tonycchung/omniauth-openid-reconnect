@@ -20,7 +20,7 @@ This is derrived work from `jjbohn/omniauth-openid-connect` which appears to be 
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-openid-connect'
+    gem 'omniauth-openid-reconnect'
 
 And then execute:
 
@@ -28,7 +28,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install omniauth-openid-connect
+    $ gem install omniauth-openid-reconnect
 
 ## Usage
 
@@ -60,7 +60,7 @@ For the full low down on OpenID Connect, please check out
 
 ## Contributing
 
-1. Fork it ( http://github.com/thinkthroughmath/omniauth-openid-connect/fork )
+1. Fork it ( http://github.com/thinkthroughmath/omniauth-openid-reconnect/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

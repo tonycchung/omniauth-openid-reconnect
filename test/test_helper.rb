@@ -11,6 +11,7 @@ require 'faker'
 require_relative '../lib/omniauth-openid-reconnect'
 
 OmniAuth.config.test_mode = true
+OmniAuth.config.logger = Logger.new('/dev/null')
 
 class StrategyTestCase < MiniTest::Test
   class DummyApp

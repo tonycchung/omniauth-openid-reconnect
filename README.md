@@ -11,7 +11,7 @@ This is derrived work from `jjbohn/omniauth-openid-connect` which appears to be 
 
 ### Whats different.
 
-- Using Addressable 2.8 - At 2.9 `addressable` decided that the way that Rails 3 handles param[] items was too hard to handle and removed the feature. This breaking change within a semantic version makes using `addressable-3.0` difficult in existing applications. There is no impact on the auth strategy though.
+- Using Addressable 2.2.8 - In 2.3+ `addressable` decided that the way that Rails 3 handles param[] items was too hard to handle and removed the feature. This breaking change within a semantic version makes using addressable > 2.3 difficult in existing applications. There is no impact on the auth strategy though.
 - Better devise support be returning a default `name` options parameter
 - Partial integration of google `nonce` requirement.
 - Inclusing of aging PRs from the parent gem this replaces.
